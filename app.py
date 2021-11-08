@@ -18,7 +18,7 @@ meteorite_count = pd.read_csv("Resources/Meteorites_Count.csv")
 # Setup mongo connection
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/meteorite_app"
 mongo_uri = os.environ.get("MONGO_URI")
-app.config["MONGO_URI"] = "mongodb+srv://dacheldor_user_1:7syDqcA2kfNGY1J8@dacheldor.e6j43.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = mongo_uri
 mongo = PyMongo(app)
 
 # Populate mongo database
