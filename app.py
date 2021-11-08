@@ -2,6 +2,7 @@
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
 import pandas as pd
+import os
 
 # Create an instance of the Flask app
 app = Flask(__name__)
@@ -16,6 +17,7 @@ meteorite_count = pd.read_csv("Resources/Meteorites_Count.csv")
 
 # Setup mongo connection
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/meteorite_app"
+mongo_uri = os.environ.get("MONGO_URI")
 app.config["MONGO_URI"] = "mongodb+srv://dacheldor_user_1:7syDqcA2kfNGY1J8@dacheldor.e6j43.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongo = PyMongo(app)
 
