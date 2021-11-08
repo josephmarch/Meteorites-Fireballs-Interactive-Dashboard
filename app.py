@@ -17,7 +17,7 @@ meteorite_count = pd.read_csv("Resources/Meteorites_Count.csv")
 
 # Setup mongo connection
 # app.config["MONGO_URI"] = "mongodb://localhost:27017/meteorite_app"
-mongo_uri = os.environ.get("MONGO_URI")
+mongo_uri = os.environ.get("MONGODB_URI")
 app.config["MONGO_URI"] = mongo_uri
 mongo = PyMongo(app)
 
