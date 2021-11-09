@@ -22,7 +22,7 @@ function bargraph(year) {
         x: years,
         y: counts,
         type: "bar",
-        orientation: "h",
+        //orientation: "h",
         marker: {
             color: color_list
         }
