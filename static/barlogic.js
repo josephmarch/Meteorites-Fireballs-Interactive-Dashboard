@@ -3,8 +3,10 @@ function bargraph(year) {
     // Pull years and count from Flask
     var years = m_years.slice(1,-7).split(", ");
     var counts = m_count.slice(1,-4).split(", ");
+    var n_counts = []
+    for (let i = 0; i<counts.length; i++) {n_counts.push(Number(counts[i]))}
     console.log(years);
-    console.log(counts);
+    console.log(n_counts);
 
     // create color list
     color_list = [];
@@ -20,7 +22,7 @@ function bargraph(year) {
     // Trace for meteorite data
     let trace = {
         x: years,
-        y: counts,
+        y: n_counts,
         type: "bar",
         //orientation: "h",
         marker: {
@@ -28,7 +30,7 @@ function bargraph(year) {
         }
     };
     console.log(trace);
-    
+
     // Data trace array
     let traceData = [trace];
     // Apply title to the layout
