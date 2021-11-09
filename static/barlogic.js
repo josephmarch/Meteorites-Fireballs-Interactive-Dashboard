@@ -38,6 +38,7 @@ function bargraph(year) {
         },
         yaxis: {
             title: "Meteorites",
+            type: "linear",
             range: [1, 3500]
         }
     };
