@@ -27,6 +27,8 @@ function bargraph(year) {
             color: color_list
         }
     };
+    console.log(trace);
+    
     // Data trace array
     let traceData = [trace];
     // Apply title to the layout
