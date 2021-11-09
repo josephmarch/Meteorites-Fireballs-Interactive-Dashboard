@@ -36,6 +36,7 @@ function bargraph(year) {
     // Apply title to the layout
     let layout = {
         title: "<b>Meteorites per Year</b>",
+        autosize: true,
         xaxis: {
             title: "Year",
             type: "category"
