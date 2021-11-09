@@ -43,7 +43,7 @@ function bargraph(year) {
         yaxis: {
             title: "Meteorites",
             type: "linear",
-            range: [1, 3500]
+            autorange: true
         }
     };
     // Render the plot to the div tag with id "plot"
